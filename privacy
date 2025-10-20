@@ -1,45 +1,149 @@
-Effective Date: June 1, 2023
-At KarahAndEllie ("we," "us," or "KarahAndEllie"), we are committed to protecting the privacy and safety of users who use our application ("the Service"). This Privacy Policy explains how we collect, use, disclose, and protect personal information obtained from users of the Service. By accessing or using our Service, you agree to the terms of this Privacy Policy.
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy — KarahAndEllie</title>
+  <style>
+    :root {
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #0b5fff;
+      --maxw: 900px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body {
+      background: var(--bg);
+      color: #111827;
+      margin: 0;
+      padding: 40px 16px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: var(--maxw);
+      width: 100%;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(15,23,42,0.06);
+      padding: 32px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    section { margin: 20px 0; line-height: 1.6; }
+    h2 {
+      font-size: 16px;
+      margin: 0 0 10px;
+    }
+    ul { margin: 8px 0 0 20px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .contact {
+      background: #f3f4f6;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    footer { margin-top: 18px; font-size: 13px; color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    @media (max-width:600px){
+      body { padding: 20px 12px; }
+      .container { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1>Privacy Policy</h1>
+      <div class="meta">Effective Date: June 1, 2023</div>
+    </header>
 
-1. Information We Collect
-1.1 Personal Information:
-We only collect personal information from users with their consent, and we do not require users to provide more personal information than is reasonably necessary to use the Service. The types of personal information we may collect include:
+    <section>
+      <p>At <strong>KarahAndEllie</strong> ("we," "us," or "KarahAndEllie"), we are committed to protecting the privacy and safety of users who use our application ("the Service"). This Privacy Policy explains how we collect, use, disclose, and protect personal information obtained from users of the Service. By accessing or using our Service, you agree to the terms of this Privacy Policy.</p>
+    </section>
 
-Name: We may collect the user's name, which is used for personalization purposes within the stories.
-Age: We may collect the user's age to ensure age-appropriate content is provided.
-Contact Information: We may collect contact information, such as email address, to communicate important updates, address user inquiries, and provide customer support.
-1.2 Non-Personal Information:
-We may collect non-personal information automatically when users access or use the Service. This information may include:
+    <section>
+      <h2>1. Information We Collect</h2>
 
-Device Information: We may collect information about the device used to access the Service, such as device type, operating system, browser type, and IP address.
-Usage Information: We may collect information about how users interact with the Service, including pages visited, features used, and actions taken.
-Cookies and Similar Technologies: We may use cookies and similar technologies to collect information and improve the user experience. Users can manage cookie preferences through their browser settings.
-2. Use of Information
-We may use the collected information for the following purposes:
+      <h3>1.1 Personal Information</h3>
+      <p>We only collect personal information with user consent and only what is reasonably necessary to provide the Service. Types of personal information we may collect include:</p>
+      <ul>
+        <li><strong>Name</strong>: used for personalization within stories.</li>
+        <li><strong>Age</strong>: used to ensure age-appropriate content.</li>
+        <li><strong>Contact Information</strong>: such as email address for updates and support.</li>
+      </ul>
 
-To provide and personalize the Service: We use personal information to generate stories and images based on user preferences, ages, and interests.
-To communicate with users: We may use contact information to send notifications, updates, and newsletters related to the Service. We may also respond to user inquiries and provide customer support.
-To improve the Service: We analyze non-personal information to understand user preferences, identify usage trends, and enhance the functionality and content of the Service.
-To enforce policies and prevent misuse: We may use the information to enforce our Terms of Service, detect and prevent fraud or other misuse of the Service.
-3. Sharing and Disclosure of Information
-We do not sell, rent, or disclose personal information to third parties without user consent, except in the following circumstances:
+      <h3>1.2 Non-Personal Information</h3>
+      <p>We may collect non-personal information automatically when users access the Service, including:</p>
+      <ul>
+        <li><strong>Device Information</strong>: device type, OS, browser, and IP address.</li>
+        <li><strong>Usage Information</strong>: pages visited, features used, and actions taken.</li>
+        <li><strong>Cookies and Similar Technologies</strong>: to enhance the user experience. Users may manage cookie preferences through their browser settings.</li>
+      </ul>
+    </section>
 
-Service Providers: We may engage trusted third-party service providers who assist us in operating, managing, and improving the Service. These providers are bound by confidentiality obligations and may only use personal information in accordance with our instructions.
-Legal Requirements: We may disclose personal information if required by law, court order, or government regulation, or if we believe disclosure is necessary to protect our rights, property, or safety, or that of others.
-Business Transfers: In the event of a merger, acquisition, or sale of all or a portion of our assets, personal information may be transferred as part of the transaction, subject to confidentiality and security measures.
-4. User Control and Rights
-Users have the right to review, update, and delete their personal information. They can contact us at support@storybooks.app to exercise these rights or raise any concerns regarding their personal information.
+    <section>
+      <h2>2. Use of Information</h2>
+      <p>We use collected information to:</p>
+      <ul>
+        <li>Provide and personalize the Service (generate stories and images based on preferences, age, and interests).</li>
+        <li>Communicate with users (notifications, updates, and customer support).</li>
+        <li>Improve the Service by analyzing usage trends and user preferences.</li>
+        <li>Enforce our Terms of Service and prevent misuse or fraud.</li>
+      </ul>
+    </section>
 
-5. Data Security
-We take appropriate measures to safeguard the personal information collected through the Service. However, no method of transmission or storage is completely secure. We cannot guarantee the absolute security of personal information.
+    <section>
+      <h2>3. Sharing and Disclosure of Information</h2>
+      <p>We do not sell, rent, or disclose personal information to third parties without user consent, except in these cases:</p>
+      <ul>
+        <li><strong>Service Providers</strong>: trusted third parties who help operate and improve the Service; they are contractually required to protect data and follow our instructions.</li>
+        <li><strong>Legal Requirements</strong>: disclosure required by law, court order, or to protect rights and safety.</li>
+        <li><strong>Business Transfers</strong>: in the event of a merger, acquisition, or sale, personal information may be transferred as part of the transaction subject to confidentiality and security safeguards.</li>
+      </ul>
+    </section>
 
-6. Links to Third-Party Websites
-The Service may contain links to third-party websites or services that are not under our control. We are not responsible for the privacy practices or content of such websites. We encourage users to review the privacy policies of those third parties.
+    <section>
+      <h2>4. User Control and Rights</h2>
+      <p>Users have the right to review, update, and delete their personal information. To exercise these rights or raise concerns, contact us:</p>
+      <div class="contact">
+        <div><strong>Support email (for account requests):</strong> <a href="mailto:support@storybooks.app">support@storybooks.app</a></div>
+        <div><strong>Primary contact:</strong> <a href="mailto:swissashley@gmail.com">swissashley@gmail.com</a></div>
+      </div>
+    </section>
 
-7. Changes to this Privacy Policy
-We may update this Privacy Policy from time to time. If we make material changes, we will notify users by posting a prominent notice on our website or through other means. Your continued use of the Service following the changes constitutes your acceptance of the revised Privacy Policy.
+    <section>
+      <h2>5. Data Security</h2>
+      <p>We implement reasonable administrative, technical, and physical safeguards to protect personal information. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+    </section>
 
-8. Contact Us
-If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at swissashley@gmail.com
+    <section>
+      <h2>6. Links to Third-Party Websites</h2>
+      <p>The Service may contain links to third-party websites or services that we do not control. We are not responsible for their privacy practices. We encourage users to review third parties' privacy policies.</p>
+    </section>
 
-Please note that this privacy policy is a general template and may need customization to align with your specific business practices, applicable laws, and regulations. It is recommended to consult with a qualified attorney to ensure compliance with all relevant legal requirements.
+    <section>
+      <h2>7. Changes to this Privacy Policy</h2>
+      <p>We may update this Privacy Policy occasionally. If we make material changes, we will notify users with a prominent notice on our site or by other means. Continued use of the Service after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2>8. Contact Us</h2>
+      <p>If you have questions, concerns, or requests about this Privacy Policy or our practices, please contact us at <a href="mailto:swissashley@gmail.com">swissashley@gmail.com</a>.</p>
+    </section>
+
+    <footer>
+      <div class="muted">This Privacy Policy is a general template and may require customization to align with applicable laws and specific business practices. Please consult a qualified attorney to ensure legal compliance.</div>
+    </footer>
+  </div>
+</body>
+</html>
