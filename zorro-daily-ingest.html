@@ -4,87 +4,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Financial Brief - 2026-01-09</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            color: #1a1a1a;
+            background-color: #0a0e27;
+            padding: 0;
+            margin: 0;
         }
         .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+            box-shadow: 0 0 60px rgba(0,0,0,0.3);
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 40px 50px;
+            border-bottom: 4px solid #3b82f6;
+        }
+        .header h1 {
+            color: white;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+        .header .subtitle {
+            color: #e0e7ff;
+            font-size: 1.1em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .content {
+            padding: 40px 50px;
         }
         h2 {
-            color: #34495e;
-            margin-top: 30px;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 5px;
+            color: #1e3a8a;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 700;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+        h2:first-of-type {
+            margin-top: 0;
         }
         h3 {
-            color: #7f8c8d;
-            margin-top: 20px;
+            color: #1e40af;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 600;
+            border-left: 4px solid #3b82f6;
+            padding-left: 15px;
         }
         a {
-            color: #3498db;
+            color: #2563eb;
             text-decoration: none;
+            font-weight: 500;
         }
         a:hover {
+            color: #1d4ed8;
             text-decoration: underline;
         }
         ul, ol {
+            margin: 15px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        ul > li, ol > li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.7;
+        }
+        ul > li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        ul ul, ol ol {
             margin: 10px 0;
             padding-left: 30px;
+            border-left: 2px solid #e5e7eb;
+            margin-left: 15px;
         }
-        li {
-            margin: 5px 0;
+        ul ul > li::before {
+            content: "▪";
+            color: #6b7280;
+            font-size: 0.8em;
+        }
+        ul ul ul > li::before {
+            content: "•";
+            color: #9ca3af;
         }
         strong {
-            color: #2c3e50;
+            color: #111827;
+            font-weight: 600;
         }
         code {
-            background-color: #f4f4f4;
+            background-color: #f3f4f6;
             padding: 2px 6px;
             border-radius: 3px;
-            font-family: 'Courier New', monospace;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #dc2626;
+            border: 1px solid #e5e7eb;
+        }
+        em {
+            color: #6b7280;
+            font-style: italic;
         }
         .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ecf0f1;
-            color: #95a5a6;
+            background-color: #f9fafb;
+            margin-top: 60px;
+            padding: 30px 50px;
+            border-top: 2px solid #e5e7eb;
+            color: #6b7280;
             font-size: 0.9em;
             text-align: center;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 15px 0;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ecf0f1;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         th {
-            background-color: #3498db;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             color: white;
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+        td {
+            padding: 12px 18px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        tr:hover {
+            background-color: #f9fafb;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        /* Financial data styling */
+        .buy-signal {
+            color: #059669;
+            font-weight: 600;
+        }
+        .sell-signal {
+            color: #dc2626;
+            font-weight: 600;
+        }
+        /* Section dividers */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+            margin: 40px 0;
+        }
+        /* Alert boxes */
+        .alert {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        /* Politician stock details - nested styling */
+        ul > li > ul > li {
+            color: #4b5563;
+            font-size: 0.95em;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+        }
+        /* Better spacing */
+        p {
+            margin: 15px 0;
+            line-height: 1.7;
+        }
+        /* Executive summary styling */
+        h2 + p, h2 + ul {
+            background-color: #f9fafb;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #3b82f6;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Daily Financial Brief - 2026-01-09</h1>
+        <div class="header">
+            <h1>Daily Financial Brief</h1>
+            <div class="subtitle">2026-01-09 | Congressional Trading Intelligence Report</div>
+        </div>
+        <div class="content">
+            <h1>Daily Financial Brief - 2026-01-09</h1>
 <h2>Executive Summary</h2>
 <ul>
 <li>5 congressional disclosure(s) found</li>
@@ -109,8 +242,8 @@
 <li><strong>CBRL</strong>: $80,003 total | Net Sell: $19,999 | 1 politician(s) | 3 transaction(s)</li>
 <li><strong>FWONK</strong>: $65,002 total | Net Sell: $65,002 | 1 politician(s) | 2 transaction(s)</li>
 <li><strong>BTC</strong>: $50,001 total | Net Buy: $50,001 | 1 politician(s) | 1 transaction(s)</li>
-<li><strong>ARM</strong>: $50,001 total | Net Sell: $50,001 | 1 politician(s) | 1 transaction(s)</li>
 <li><strong>UBER</strong>: $50,001 total | Net Sell: $50,001 | 1 politician(s) | 1 transaction(s)</li>
+<li><strong>ARM</strong>: $50,001 total | Net Sell: $50,001 | 1 politician(s) | 1 transaction(s)</li>
 <li><strong>VZ</strong>: $16,002 total | Net Buy: $16,002 | 2 politician(s) | 2 transaction(s)</li>
 <li><strong>BSCQ</strong>: $15,001 total | Net Buy: $15,001 | 1 politician(s) | 1 transaction(s)</li>
 <li><strong>3.MONTH, MATURE</strong>: $15,001 total | Net Buy: $15,001 | 1 politician(s) | 1 transaction(s)</li>
@@ -122,54 +255,74 @@
 <li><strong>INTC</strong>: $15,001 total | Net Sell: $15,001 | 1 politician(s) | 1 transaction(s)</li>
 <li><strong>CRWV</strong>: $15,001 total | Net Sell: $15,001 | 1 politician(s) | 1 transaction(s)</li>
 <li><strong>T</strong>: $15,001 total | Net Sell: $15,001 | 1 politician(s) | 1 transaction(s)</li>
-<li><strong>MELI</strong>: $15,001 total | Net Sell: $15,001 | 1 politician(s) | 1 transaction(s)</li>
 <li><strong>THC</strong>: $15,001 total | Net Buy: $15,001 | 1 politician(s) | 1 transaction(s)</li>
+<li><strong>MELI</strong>: $15,001 total | Net Sell: $15,001 | 1 politician(s) | 1 transaction(s)</li>
 <li><strong>MSFT</strong>: $3,003 total | Net Buy: $1,001 | 2 politician(s) | 3 transaction(s)</li>
 </ul>
 <h3>Most Active Politicians</h3>
 <ul>
-<li><strong>Cleo Fields</strong> (House): $249,010 across 10 transaction(s), 8 stock(s)</li>
+<li><strong>Cleo Fields</strong> (House): $249,010 across 10 transaction(s), 8 stock(s)<ul>
 <li>GOOGL: $115,002 total (Buy: $115,002, Sell: $0, 2 transaction(s))</li>
-<li>ARM: $50,001 total (Buy: $0, Sell: $50,001, 1 transaction(s))</li>
 <li>UBER: $50,001 total (Buy: $0, Sell: $50,001, 1 transaction(s))</li>
+<li>ARM: $50,001 total (Buy: $0, Sell: $50,001, 1 transaction(s))</li>
 <li>CRWV: $15,001 total (Buy: $0, Sell: $15,001, 1 transaction(s))</li>
 <li>T: $15,001 total (Buy: $0, Sell: $15,001, 1 transaction(s))</li>
 <li>MSFT: $2,002 total (Buy: $2,002, Sell: $0, 2 transaction(s))</li>
 <li>GOOG: $1,001 total (Buy: $1,001, Sell: $0, 1 transaction(s))</li>
 <li>SOUN: $1,001 total (Buy: $0, Sell: $1,001, 1 transaction(s))</li>
-<li><strong>Tim Moore</strong> (House): $111,006 across 6 transaction(s), 4 stock(s)</li>
+</ul>
+</li>
+<li><strong>Tim Moore</strong> (House): $111,006 across 6 transaction(s), 4 stock(s)<ul>
 <li>CBRL: $80,003 total (Buy: $30,002, Sell: $50,001, 3 transaction(s))</li>
-<li>HOG: $15,001 total (Buy: $15,001, Sell: $0, 1 transaction(s))</li>
 <li>VZ: $15,001 total (Buy: $15,001, Sell: $0, 1 transaction(s))</li>
+<li>HOG: $15,001 total (Buy: $15,001, Sell: $0, 1 transaction(s))</li>
 <li>GNPX: $1,001 total (Buy: $1,001, Sell: $0, 1 transaction(s))</li>
-<li><strong>John Hickenlooper</strong> (Senate): $65,002 across 2 transaction(s), 1 stock(s)</li>
+</ul>
+</li>
+<li><strong>John Hickenlooper</strong> (Senate): $65,002 across 2 transaction(s), 1 stock(s)<ul>
 <li>FWONK: $65,002 total (Buy: $0, Sell: $65,002, 2 transaction(s))</li>
-<li><strong>Jonathan Jackson</strong> (House): $60,004 across 4 transaction(s), 4 stock(s)</li>
+</ul>
+</li>
+<li><strong>Jonathan Jackson</strong> (House): $60,004 across 4 transaction(s), 4 stock(s)<ul>
+<li>PLTR: $15,001 total (Buy: $15,001, Sell: $0, 1 transaction(s))</li>
 <li>MELI: $15,001 total (Buy: $0, Sell: $15,001, 1 transaction(s))</li>
 <li>THC: $15,001 total (Buy: $15,001, Sell: $0, 1 transaction(s))</li>
 <li>HOOD: $15,001 total (Buy: $0, Sell: $15,001, 1 transaction(s))</li>
-<li>PLTR: $15,001 total (Buy: $15,001, Sell: $0, 1 transaction(s))</li>
-<li><strong>Byron Donalds</strong> (House): $50,001 across 1 transaction(s), 1 stock(s)</li>
+</ul>
+</li>
+<li><strong>Byron Donalds</strong> (House): $50,001 across 1 transaction(s), 1 stock(s)<ul>
 <li>BTC: $50,001 total (Buy: $50,001, Sell: $0, 1 transaction(s))</li>
-<li><strong>Lindsey Graham</strong> (Senate): $45,003 across 3 transaction(s), 3 stock(s)</li>
+</ul>
+</li>
+<li><strong>Lindsey Graham</strong> (Senate): $45,003 across 3 transaction(s), 3 stock(s)<ul>
 <li>IBDQ: $15,001 total (Buy: $0, Sell: $15,001, 1 transaction(s))</li>
 <li>BSCQ: $15,001 total (Buy: $15,001, Sell: $0, 1 transaction(s))</li>
 <li>BSCP: $15,001 total (Buy: $0, Sell: $15,001, 1 transaction(s))</li>
-<li><strong>Gary Peters</strong> (Senate): $16,002 across 2 transaction(s), 2 stock(s)</li>
+</ul>
+</li>
+<li><strong>Gary Peters</strong> (Senate): $16,002 across 2 transaction(s), 2 stock(s)<ul>
 <li>INTC: $15,001 total (Buy: $0, Sell: $15,001, 1 transaction(s))</li>
 <li>VZ: $1,001 total (Buy: $1,001, Sell: $0, 1 transaction(s))</li>
-<li><strong>Rudy C. Yakym Iii</strong> (House): $15,001 across 1 transaction(s), 1 stock(s)</li>
+</ul>
+</li>
+<li><strong>Rudy C. Yakym Iii</strong> (House): $15,001 across 1 transaction(s), 1 stock(s)<ul>
 <li>3.MONTH, MATURE: $15,001 total (Buy: $15,001, Sell: $0, 1 transaction(s))</li>
-<li><strong>Lloyd Doggett</strong> (House): $4,004 across 4 transaction(s), 4 stock(s)</li>
+</ul>
+</li>
+<li><strong>Lloyd Doggett</strong> (House): $4,004 across 4 transaction(s), 4 stock(s)<ul>
 <li>IBM: $1,001 total (Buy: $1,001, Sell: $0, 1 transaction(s))</li>
 <li>PPG: $1,001 total (Buy: $1,001, Sell: $0, 1 transaction(s))</li>
-<li>HD: $1,001 total (Buy: $1,001, Sell: $0, 1 transaction(s))</li>
 <li>KO: $1,001 total (Buy: $1,001, Sell: $0, 1 transaction(s))</li>
-<li><strong>Shelley Moore Capito</strong> (Senate): $4,004 across 4 transaction(s), 4 stock(s)</li>
+<li>HD: $1,001 total (Buy: $1,001, Sell: $0, 1 transaction(s))</li>
+</ul>
+</li>
+<li><strong>Shelley Moore Capito</strong> (Senate): $4,004 across 4 transaction(s), 4 stock(s)<ul>
 <li>MSFT: $1,001 total (Buy: $0, Sell: $1,001, 1 transaction(s))</li>
-<li>GOOGL: $1,001 total (Buy: $0, Sell: $1,001, 1 transaction(s))</li>
 <li>AAPL: $1,001 total (Buy: $0, Sell: $1,001, 1 transaction(s))</li>
+<li>GOOGL: $1,001 total (Buy: $0, Sell: $1,001, 1 transaction(s))</li>
 <li>K: $1,001 total (Buy: $0, Sell: $1,001, 1 transaction(s))</li>
+</ul>
+</li>
 </ul>
 <h3>Activity by Chamber</h3>
 <ul>
@@ -185,10 +338,10 @@
 <li><strong>3.MONTH, MATURE</strong>: Heavy buying pressure: $15,001 buying (100.0%) vs $0 selling (0.0%) | Net: $15,001 (100.0% imbalance) | 1 politician(s)</li>
 <li><strong>HOOD</strong>: Heavy selling pressure: $0 buying (0.0%) vs $15,001 selling (100.0%) | Net: $15,001 (100.0% imbalance) | 1 politician(s)</li>
 <li><strong>PLTR</strong>: Heavy buying pressure: $15,001 buying (100.0%) vs $0 selling (0.0%) | Net: $15,001 (100.0% imbalance) | 1 politician(s)</li>
-<li><strong>IBDQ</strong>: Heavy selling pressure: $0 buying (0.0%) vs $15,001 selling (100.0%) | Net: $15,001 (100.0% imbalance) | 1 politician(s)</li>
-<li><strong>HOG</strong>: Heavy buying pressure: $15,001 buying (100.0%) vs $0 selling (0.0%) | Net: $15,001 (100.0% imbalance) | 1 politician(s)</li>
 <li><strong>GNPX</strong>: Heavy buying pressure: $1,001 buying (100.0%) vs $0 selling (0.0%) | Net: $1,001 (100.0% imbalance) | 1 politician(s)</li>
 <li><strong>BTC</strong>: Heavy buying pressure: $50,001 buying (100.0%) vs $0 selling (0.0%) | Net: $50,001 (100.0% imbalance) | 1 politician(s)</li>
+<li><strong>IBDQ</strong>: Heavy selling pressure: $0 buying (0.0%) vs $15,001 selling (100.0%) | Net: $15,001 (100.0% imbalance) | 1 politician(s)</li>
+<li><strong>HOG</strong>: Heavy buying pressure: $15,001 buying (100.0%) vs $0 selling (0.0%) | Net: $15,001 (100.0% imbalance) | 1 politician(s)</li>
 </ul>
 <h3>Trading Frequency by Stock</h3>
 <ul>
@@ -196,8 +349,8 @@
 <li><strong>CBRL</strong>: $80,003 total | Buy: $30,002 (37.5%) | Sell: $50,001 (62.5%) | 3 transaction(s) | 1 politician(s)</li>
 <li><strong>FWONK</strong>: $65,002 total | Buy: $0 (0.0%) | Sell: $65,002 (100.0%) | 2 transaction(s) | 1 politician(s)</li>
 <li><strong>BTC</strong>: $50,001 total | Buy: $50,001 (100.0%) | Sell: $0 (0.0%) | 1 transaction(s) | 1 politician(s)</li>
-<li><strong>ARM</strong>: $50,001 total | Buy: $0 (0.0%) | Sell: $50,001 (100.0%) | 1 transaction(s) | 1 politician(s)</li>
 <li><strong>UBER</strong>: $50,001 total | Buy: $0 (0.0%) | Sell: $50,001 (100.0%) | 1 transaction(s) | 1 politician(s)</li>
+<li><strong>ARM</strong>: $50,001 total | Buy: $0 (0.0%) | Sell: $50,001 (100.0%) | 1 transaction(s) | 1 politician(s)</li>
 <li><strong>VZ</strong>: $16,002 total | Buy: $16,002 (100.0%) | Sell: $0 (0.0%) | 2 transaction(s) | 2 politician(s)</li>
 <li><strong>BSCQ</strong>: $15,001 total | Buy: $15,001 (100.0%) | Sell: $0 (0.0%) | 1 transaction(s) | 1 politician(s)</li>
 <li><strong>3.MONTH, MATURE</strong>: $15,001 total | Buy: $15,001 (100.0%) | Sell: $0 (0.0%) | 1 transaction(s) | 1 politician(s)</li>
@@ -234,8 +387,8 @@
 <h2>Advanced Trading Signals</h2>
 <h3>Exit Signals (Politicians Exiting)</h3>
 <ul>
-<li><strong>BSCQ</strong>: $15,001 from 1 politician(s) (exited in last 7 days)</li>
 <li><strong>CBRL</strong>: $15,001 from 1 politician(s) (exited in last 7 days)</li>
+<li><strong>BSCQ</strong>: $15,001 from 1 politician(s) (exited in last 7 days)</li>
 <li><strong>EFC</strong>: $1,001 from 1 politician(s) (exited in last 7 days)</li>
 </ul>
 <h3>Chamber Divergence Signals</h3>
@@ -249,9 +402,10 @@
 <li><strong>Average Lag</strong>: 14.4 days (Median: 16.0 days, Range: 0-29 days) | Sample Size: 44 disclosures</li>
 </ul>
 <hr />
-<p><em>Generated at 2026-01-09 17:18:36</em></p>
+<p><em>Generated at 2026-01-09 17:23:07</em></p>
+        </div>
         <div class="footer">
-            <p>Generated at 2026-01-09 17:18:36</p>
+            <p>Generated at 2026-01-09 17:23:07 | Tradeify Financial Intelligence</p>
         </div>
     </div>
 </body>
