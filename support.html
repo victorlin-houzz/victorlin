@@ -145,48 +145,14 @@
             animation-delay: 110ms;
         }
 
-        .qr-card {
+        .qr-image {
             width: 100%;
             max-width: 430px;
-            background: #ffffff;
-            border-radius: 28px;
-            border: 1px solid #e2e8f6;
-            padding: 20px;
-            box-shadow: 0 15px 30px rgba(17, 18, 27, 0.08);
-            text-align: center;
-        }
-
-        .name {
-            margin: 2px 0 0;
-            font-size: 2rem;
-            letter-spacing: -0.02em;
-            font-weight: 700;
-        }
-
-        .handle {
-            margin: 4px 0 16px;
-            color: #6b7488;
-            font-size: 1.7rem;
-            letter-spacing: -0.01em;
-        }
-
-        .qr-image {
-            width: min(100%, 360px);
             display: block;
             margin: 0 auto;
-            border-radius: 14px;
-            border: 1px solid #e9edf8;
-        }
-
-        .venmo {
-            margin: 14px 0 0;
-            font-size: 2.6rem;
-            font-weight: 700;
-            font-style: italic;
-            letter-spacing: -0.04em;
-            color: #111;
-            line-height: 1;
-            text-transform: lowercase;
+            border-radius: 28px;
+            border: 1px solid #e2e8f6;
+            box-shadow: 0 15px 30px rgba(17, 18, 27, 0.08);
         }
 
         @keyframes rise-in {
@@ -214,13 +180,6 @@
                 border-top: 1px solid var(--line);
             }
 
-            .name {
-                font-size: 1.75rem;
-            }
-
-            .handle {
-                font-size: 1.45rem;
-            }
         }
     </style>
 </head>
@@ -238,17 +197,12 @@
         </section>
 
         <aside class="panel qr" aria-label="Venmo QR code">
-            <div class="qr-card">
-                <h2 class="name">Victor Lin</h2>
-                <p class="handle">@swissashley</p>
-                <img
-                    class="qr-image"
-                    src="images/venmo-qr.png"
-                    alt="Venmo QR code for @swissashley"
-                    loading="eager"
-                />
-                <p class="venmo">venmo</p>
-            </div>
+            <img
+                class="qr-image"
+                src="images/venmo-qr.png"
+                alt="Venmo QR code for @swissashley"
+                loading="eager"
+            />
         </aside>
     </main>
 </body>
