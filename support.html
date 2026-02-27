@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support Victor Lin</title>
+    <meta name="description" content="Support Victor Lin with a Venmo donation." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --ink: #11121b;
+            --muted: #5a6073;
+            --surface: #ffffff;
+            --line: #dde2ee;
+            --accent: #008cff;
+            --accent-deep: #036ac2;
+            --halo: rgba(0, 140, 255, 0.2);
+            --sky: #eef7ff;
+            --mist: #f6f7fb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+            color: var(--ink);
+            background: radial-gradient(circle at 10% 10%, #d8ebff 0%, transparent 40%),
+                radial-gradient(circle at 90% 0%, #c5f3ff 0%, transparent 32%),
+                linear-gradient(160deg, var(--sky) 0%, var(--mist) 60%, #ffffff 100%);
+            display: grid;
+            place-items: center;
+            padding: 28px 16px;
+        }
+
+        .shell {
+            width: min(980px, 100%);
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            box-shadow: 0 22px 45px rgba(16, 23, 47, 0.1);
+            overflow: hidden;
+            animation: rise-in 700ms ease both;
+        }
+
+        .intro {
+            padding: 42px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .kicker {
+            margin: 0;
+            color: var(--accent-deep);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: "Fraunces", Georgia, serif;
+            font-size: clamp(2rem, 5vw, 3.1rem);
+            line-height: 1.05;
+            letter-spacing: -0.01em;
+        }
+
+        .lead {
+            margin: 0;
+            color: var(--muted);
+            max-width: 35ch;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 4px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 8px 22px var(--halo);
+        }
+
+        .btn-primary:hover {
+            background: #007de1;
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            border-color: var(--line);
+            color: var(--ink);
+            background: #fff;
+        }
+
+        .btn-ghost:hover {
+            border-color: #c9d2e6;
+            background: #f8faff;
+            transform: translateY(-1px);
+        }
+
+        .meta {
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .qr {
+            padding: 18px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(170deg, #f9fcff 0%, #eef4ff 100%);
+            border-left: 1px solid var(--line);
+            animation-delay: 110ms;
+        }
+
+        .qr-card {
+            width: 100%;
+            max-width: 430px;
+            background: #ffffff;
+            border-radius: 28px;
+            border: 1px solid #e2e8f6;
+            padding: 20px;
+            box-shadow: 0 15px 30px rgba(17, 18, 27, 0.08);
+            text-align: center;
+        }
+
+        .name {
+            margin: 2px 0 0;
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
+
+        .handle {
+            margin: 4px 0 16px;
+            color: #6b7488;
+            font-size: 1.7rem;
+            letter-spacing: -0.01em;
+        }
+
+        .qr-image {
+            width: min(100%, 360px);
+            display: block;
+            margin: 0 auto;
+            border-radius: 14px;
+            border: 1px solid #e9edf8;
+        }
+
+        .venmo {
+            margin: 14px 0 0;
+            font-size: 2.6rem;
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: -0.04em;
+            color: #111;
+            line-height: 1;
+            text-transform: lowercase;
+        }
+
+        @keyframes rise-in {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .shell {
+                grid-template-columns: 1fr;
+            }
+
+            .intro {
+                padding: 28px;
+            }
+
+            .qr {
+                border-left: 0;
+                border-top: 1px solid var(--line);
+            }
+
+            .name {
+                font-size: 1.75rem;
+            }
+
+            .handle {
+                font-size: 1.45rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="shell" aria-label="Support page">
+        <section class="panel intro">
+            <p class="kicker">Support My Work</p>
+            <h1>Fuel future projects, open-source tools, and experiments.</h1>
+            <p class="lead">If my work helped you, a Venmo tip goes directly toward time spent building and sharing useful things.</p>
+            <div class="actions">
+                <a class="btn btn-primary" href="https://venmo.com/u/swissashley" target="_blank" rel="noopener noreferrer">Donate via Venmo</a>
+                <a class="btn btn-ghost" href="index.html">Back to Portfolio</a>
+            </div>
+            <p class="meta">Venmo handle: <strong>@swissashley</strong></p>
+        </section>
+
+        <aside class="panel qr" aria-label="Venmo QR code">
+            <div class="qr-card">
+                <h2 class="name">Victor Lin</h2>
+                <p class="handle">@swissashley</p>
+                <img
+                    class="qr-image"
+                    src="images/venmo-qr.png"
+                    alt="Venmo QR code for @swissashley"
+                    loading="eager"
+                />
+                <p class="venmo">venmo</p>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
