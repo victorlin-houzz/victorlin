@@ -49,7 +49,7 @@
   <main>
     <header>
       <h1>Privacy Policy</h1>
-      <p class="muted"><strong>Last Updated:</strong> February 27, 2026</p>
+      <p class="muted"><strong>Last Updated:</strong> March 3, 2026</p>
     </header>
 
     <section>
@@ -57,7 +57,10 @@
       <p>
         Jesus Says ("we," "our," or "App") is committed to protecting your privacy.
         This Privacy Policy explains how we collect, use, disclose, and safeguard your
-        information when you use our mobile application.
+        information when you use our mobile application. <strong>You may use the App's core
+        features (AI conversations, in-app Bible reading, Reflections) without creating an
+        account or signing in.</strong> When you do sign in with Apple or use an anonymous
+        session, we collect and use information as described below.
       </p>
     </section>
 
@@ -67,7 +70,7 @@
       <h3>2.1 Information You Provide</h3>
       <ul>
         <li><strong>Conversation Data:</strong> Your voice input is processed on-device and transcribed to text; only the transcribed text is transmitted to our backend for AI processing</li>
-        <li><strong>Authentication Information:</strong> When you sign in with Apple or use the App with an anonymous session</li>
+        <li><strong>Authentication Information:</strong> Only when you optionally sign in with Apple or when the App uses an anonymous session (e.g. for convenience). Core features do not require registration.</li>
         <li><strong>Device Information:</strong> Device ID, app version, and platform information</li>
       </ul>
 
@@ -85,8 +88,9 @@
       <p>We use the information we collect to:</p>
       <ul>
         <li><strong>Provide AI-Generated Responses:</strong> Your conversations are sent to Google's Gemini AI to generate Bible verse suggestions</li>
+        <li><strong>In-App Bible Reading:</strong> When you tap a verse reference, the App displays the full passage from Bible text included in the app; no additional personal data is sent for this feature</li>
         <li><strong>Improve the App:</strong> Analyze usage patterns to enhance user experience</li>
-        <li><strong>Authentication:</strong> Verify your identity when signing in</li>
+        <li><strong>Authentication:</strong> Verify your identity when you optionally sign in with Apple</li>
         <li><strong>Analytics:</strong> Understand how the App is used (anonymized data)</li>
         <li><strong>Advertising:</strong> Display advertisements through Google AdMob. If you grant App Tracking Transparency (ATT) permission, ads may be personalized using your device's Advertising Identifier</li>
       </ul>
@@ -144,11 +148,20 @@
       </div>
 
       <div class="card">
-        <h3>5.5 Apple Sign In</h3>
+        <h3>5.5 Apple Sign In (Optional)</h3>
         <ul>
-          <li><strong>Purpose:</strong> Optional user authentication that links your account to your Apple ID, enabling purchase restoration and data persistence across reinstalls</li>
+          <li><strong>Purpose:</strong> Optional user authentication that links your account to your Apple ID, enabling purchase restoration and data persistence across reinstalls. Sign in is not required to use the App's core features.</li>
           <li><strong>Data Shared:</strong> Authentication tokens, basic profile information (if you choose to share with the App)</li>
           <li><strong>Privacy Policy:</strong> <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>5.6 Error Reporting</h3>
+        <ul>
+          <li><strong>Purpose:</strong> Capture application errors for debugging and stability improvements</li>
+          <li><strong>Data Shared:</strong> In the current release, <code>ErrorReporter</code> logs only in debug mode and does not send data to a third-party crash analytics service</li>
+          <li><strong>Future Changes:</strong> If off-device crash reporting is enabled in a future release, this section and App Store privacy disclosures will be updated before rollout</li>
         </ul>
       </div>
     </section>
@@ -156,7 +169,7 @@
     <section>
       <h2>6. Data Storage and Security</h2>
       <ul>
-        <li><strong>Local Storage:</strong> Conversation history and user preferences are stored locally on your device using encrypted storage where applicable</li>
+        <li><strong>Local Storage:</strong> Conversation history and user preferences are stored locally on your device using encrypted storage where applicable. Bible text used for in-app verse display is loaded from resources included in the app and is not transmitted to or from our servers for that feature</li>
         <li><strong>Cloud Storage:</strong> Authentication tokens and App Check data are stored securely via Firebase. We do not store your conversation content on our servers; however, your conversation text is transmitted to Google's Gemini AI for processing — Google retains this data according to their own privacy policy (see §5.1)</li>
         <li><strong>Security:</strong> We use industry-standard security measures, including iOS Keychain for sensitive data, but no method of transmission over the internet is 100% secure</li>
       </ul>
@@ -166,7 +179,7 @@
       <h2>7. Data Retention</h2>
       <ul>
         <li><strong>Conversation Data:</strong> Stored locally on your device; not retained on our servers</li>
-        <li><strong>Account Data:</strong> Retained as long as your account is active</li>
+        <li><strong>Account Data:</strong> If you have an account (e.g. after signing in with Apple), retained as long as your account is active</li>
         <li><strong>Analytics Data:</strong> Anonymized and aggregated data may be retained indefinitely</li>
       </ul>
     </section>
@@ -180,6 +193,23 @@
         <li><strong>Correction:</strong> Request correction of inaccurate data by contacting us at <a href="mailto:jesussays889@gmail.com">jesussays889@gmail.com</a></li>
         <li><strong>Opt-Out of Tracking:</strong> Deny the App Tracking Transparency permission when prompted, or change your choice at any time via iOS Settings → Privacy &amp; Security → Tracking</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>8.1 GDPR (EEA/UK) Rights and Legal Basis</h2>
+      <p>If you are in the European Economic Area (EEA) or United Kingdom:</p>
+      <ul>
+        <li><strong>Legal Basis:</strong> We process your data based on your consent (for example, consent to Terms/Privacy and ATT choices)</li>
+        <li><strong>Right to Access:</strong> Request a copy of your personal data</li>
+        <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
+        <li><strong>Right to Erasure:</strong> Request deletion of your data</li>
+        <li><strong>Right to Restrict Processing:</strong> Request temporary restriction of processing in certain circumstances</li>
+        <li><strong>Right to Data Portability:</strong> Request your data in a portable format</li>
+        <li><strong>Right to Object:</strong> Object to certain processing where applicable under local law</li>
+        <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time (this does not affect prior lawful processing)</li>
+        <li><strong>Supervisory Authority:</strong> You may lodge a complaint with your local data protection authority</li>
+      </ul>
+      <p>For GDPR and data rights requests, contact: <strong><a href="mailto:jesussays889@gmail.com">jesussays889@gmail.com</a></strong>.</p>
     </section>
 
     <section>
