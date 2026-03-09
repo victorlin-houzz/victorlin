@@ -1,207 +1,982 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Victor Lin, Sr. Manager of Cloud Engineering</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Lin — Sr. Manager of Cloud Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-		<!-- Header -->
-			<div id="header">
+    :root {
+      --bg: #0a0d14;
+      --bg-secondary: #111827;
+      --bg-card: #161d2e;
+      --border: rgba(255,255,255,0.07);
+      --accent: #3b82f6;
+      --accent-dim: rgba(59,130,246,0.12);
+      --accent-glow: rgba(59,130,246,0.25);
+      --text: #e2e8f0;
+      --text-muted: #64748b;
+      --text-subtle: #94a3b8;
+      --sidebar-w: 280px;
+      --radius: 14px;
+      --transition: 0.2s ease;
+    }
 
-				<div class="top">
+    html { scroll-behavior: smooth; }
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="http://res.cloudinary.com/pinitt/image/upload/c_scale,w_48/v1475185582/profile_k8lrcx.jpg" alt="" /></span>
-							<h1 id="title">Victor Lin</h1>
-							<p>Sr. Manager of Cloud Engineering</p>
-						</div>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
 
-					<!-- Nav -->
-						<nav id="nav">
-							<!--
+    a { color: var(--accent); text-decoration: none; transition: opacity var(--transition); }
+    a:hover { opacity: 0.8; }
 
-								Prologue's nav expects links in one of two formats:
+    /* ── Sidebar ─────────────────────────────────────────────── */
+    #sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--sidebar-w);
+      height: 100vh;
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      padding: 2.5rem 1.75rem;
+      z-index: 100;
+      overflow-y: auto;
+    }
 
-								1. Hash link (scrolls to a different section within the page)
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
 
-								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+    .avatar-wrap {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--accent), #8b5cf6);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
 
-								2. Standard link (sends the user to another page/site)
+    .avatar-wrap img {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: var(--bg-secondary);
+    }
 
-								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+    .profile h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
 
-							-->
-							<ul>
-								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
-								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
-								<li><a href="zorro-daily-digest.html" id="zorro-link"><span class="icon fa-line-chart">Zorro Daily Digest</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
-								<li><a href="#support" id="support-link" class="skel-layers-ignoreHref"><span class="icon fa-heart">Support</span></a></li>
-							</ul>
-						</nav>
+    .profile .role {
+      font-size: 0.78rem;
+      color: var(--text-subtle);
+      font-weight: 400;
+      line-height: 1.4;
+    }
 
-				</div>
+    .profile .company {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 0.2rem 0.65rem;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
 
-				<div class="bottom">
+    /* Nav */
+    nav { margin-top: 1.75rem; flex: 1; }
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/victor-i-chung-lin/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://www.github.com/victorlin-houzz" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="mailto:swissashley@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-							<li><a href="https://github.com/victorlin-houzz/victorlin/raw/master/Victor_Lin_resume_2025.pdf" class="icon fa-file"><span class="label">Resume</span></a></li>
-						</ul>
+    nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.25rem; }
 
-				</div>
+    nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.6rem 0.85rem;
+      border-radius: 8px;
+      color: var(--text-subtle);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: background var(--transition), color var(--transition);
+    }
 
-			</div>
+    nav a svg { flex-shrink: 0; opacity: 0.7; }
+    nav a:hover, nav a.active {
+      background: var(--accent-dim);
+      color: var(--accent);
+      opacity: 1;
+    }
+    nav a:hover svg, nav a.active svg { opacity: 1; }
 
-		<!-- Main -->
-			<div id="main">
+    /* Social */
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+    .social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-subtle);
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+      opacity: 1;
+    }
 
-							<header>
-								<h2 class="alt"><strong>Victor Lin</strong></h2>
-								<p>Senior Manager of Cloud Engineering @ Houzz
+    .social a:hover {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
 
-</p>
-							</header>
+    /* ── Mobile header ───────────────────────────────────────── */
+    #mobile-header {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 60px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.25rem;
+      z-index: 200;
+    }
 
-						</div>
-					</section>
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
+    #mobile-header .brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+    }
 
-							<header>
-								<h2>About Me</h2>
-							</header>
+    #menu-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.35rem 0.5rem;
+      cursor: pointer;
+      color: var(--text-subtle);
+      display: flex;
+      align-items: center;
+    }
 
-							<a href="#" class="image featured"><img src="http://res.cloudinary.com/pinitt/image/upload/c_scale,w_300/v1475189883/10603656_10203706982848825_3578693048596654851_n_yudhjs.jpg" alt="" /></a>
+    #mobile-nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 150;
+    }
 
-							<p>My mission is to build and evolve a secure, scalable, and cost-effective Cloud and Data infrastructure that supports Houzz products and analytics at scale. I focus on driving reliability, efficiency, and developer empowerment across AWS, Kubernetes, and our Data platforms. I lead 2 teams of 9 Core and Data Infrastructure Engineers, setting clear goals and providing strategic guidance to align our work with company-wide priorities.</p>
+    #mobile-nav-overlay.open { display: block; }
 
-						</div>
-					</section>
+    #mobile-nav-panel {
+      position: absolute;
+      top: 60px; right: 0;
+      width: 240px;
+      background: var(--bg-secondary);
+      border-left: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      border-radius: 0 0 0 var(--radius);
+      padding: 1rem;
+    }
 
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
+    #mobile-nav-panel ul { list-style: none; display: flex; flex-direction: column; gap: 0.25rem; }
+    #mobile-nav-panel a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.75rem;
+      border-radius: 7px;
+      color: var(--text-subtle);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    #mobile-nav-panel a:hover { background: var(--accent-dim); color: var(--accent); opacity: 1; }
 
-							<header>
-								<h2>Portfolio</h2>
-							</header>
+    /* ── Main content ────────────────────────────────────────── */
+    #main {
+      margin-left: var(--sidebar-w);
+      min-height: 100vh;
+    }
 
-							<p>Some of my old projects:</p>
+    section {
+      padding: 5rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
 
-							<div class="row">
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="http://www.pinitt.us" class="image fit"><img src="images/pinitt.png" alt="" /></a>
-										<header>
-											<h3><a href="http://www.pinitt.us">Pinitt</a> (<a href="https://github.com/swissashley/fullstack-pinitt">github</a>)</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="https://swissashley.github.io/js-CoinRush" class="image fit"><img src="images/coin_rush.png" alt="" /></a>
-										<header>
-											<h3><a href="https://swissashley.github.io/js-CoinRush">Coin Rush</a> (<a href="https://victorlin-houzz.github.io/js-CoinRush/">github</a>)</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u 12u$(mobile)">
-									<article class="item">
-										<a href="https://chrome.google.com/webstore/detail/now-you-dont-see-me/chbfbamopjjdfodhafkjhpbolcpnijio" class="image fit"><img src="images/chrome1.png" alt="" /></a>
-										<header>
-											<h3><a href="https://chrome.google.com/webstore/detail/now-you-dont-see-me/chbfbamopjjdfodhafkjhpbolcpnijio">Now You (Don't) See Me</a> (<a href="https://github.com/swissashley/chrome-ext-now-you-dont-see-me">github</a>)</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u$ 12u$(mobile)">
-									<article class="item">
-										<a href="https://chrome.google.com/webstore/detail/linkedin-endorser/mhakkhaadpkehkiiiimheegdbchfmlbi" class="image fit"><img src="images/chrome2.png" alt="" /></a>
-										<header>
-											<h3><a href="https://chrome.google.com/webstore/detail/linkedin-endorser/mhakkhaadpkehkiiiimheegdbchfmlbi">LinkedIn Endorser</a> (<a href="https://github.com/swissashley/chrome-ext-linkedinEndorser">github</a>)</h3>
-										</header>
-									</article>
-								</div>
-							</div>
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
 
-						</div>
-					</section>
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
 
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
+    /* ── Hero ────────────────────────────────────────────────── */
+    #top {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 5rem 4rem;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.08) 0%, transparent 70%),
+        var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
 
-							<header>
-								<h2>Contact</h2>
-							</header>
+    #top::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
 
-							<p>Please check out my
-								<a href="https://www.linkedin.com/in/victor-i-chung-lin/">LinkedIn</a>,
-								<a href="https://www.github.com/victorlin-houzz">Github</a>, 
-								<a href="#support">Support section</a>,
-								<a href="https://github.com/victorlin-houzz/victorlin/raw/master/Victor_Lin_resume_2025.pdf">Resume</a>,
-								<a href="https://medium.com/@victor-lin">Medium</a>
-								, or <a href="mailto:swissashley@gmail.com">email me</a>.</p>
-						</div>
-					</section>
+    .hero-content { position: relative; max-width: 640px; }
 
-				<!-- Support -->
-					<section id="support" class="three">
-						<div class="container">
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-dim);
+      border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 20px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+    }
 
-							<header>
-								<h2>Support</h2>
-							</header>
+    .hero-eyebrow span.dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s infinite;
+    }
 
-							<p>If you want to support my work, you can donate on <a href="https://venmo.com/u/swissashley">Venmo (@swissashley)</a> or scan the QR code below.</p>
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
 
-							<a href="https://venmo.com/u/swissashley" class="image featured"><img src="images/venmo-qr.png" alt="Venmo QR code for @swissashley" /></a>
+    .hero-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
 
-						</div>
-					</section>
+    .hero-name .gradient {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-			</div>
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-subtle);
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+      line-height: 1.7;
+    }
 
-		<!-- Footer -->
-			<div id="footer">
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Victor Lin. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all var(--transition);
+      cursor: pointer;
+      border: none;
+    }
 
-			</div>
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+    .btn-primary:hover { background: #2563eb; opacity: 1; box-shadow: 0 0 30px var(--accent-glow); }
 
-	</body>
+    .btn-outline {
+      background: transparent;
+      color: var(--text-subtle);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); opacity: 1; }
+
+    /* Stats bar */
+    .stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .stat-item { text-align: left; }
+
+    .stat-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* ── About ───────────────────────────────────────────────── */
+    #about { background: var(--bg-secondary); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-subtle);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .skill-group label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-subtle);
+    }
+
+    .tag.accent { background: var(--accent-dim); border-color: rgba(59,130,246,0.25); color: var(--accent); }
+
+    /* ── Portfolio ───────────────────────────────────────────── */
+    #portfolio { background: var(--bg); }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .card:hover {
+      border-color: rgba(59,130,246,0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      background: var(--bg-secondary);
+    }
+
+    .card-body {
+      padding: 1.25rem;
+    }
+
+    .card-body h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-body p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      color: var(--text-subtle);
+      transition: all var(--transition);
+      opacity: 1;
+    }
+
+    .card-link:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Contact ─────────────────────────────────────────────── */
+    #contact { background: var(--bg-secondary); }
+
+    .contact-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+      color: var(--text-subtle);
+      font-weight: 500;
+      font-size: 0.9rem;
+      opacity: 1;
+    }
+
+    .contact-card svg { flex-shrink: 0; color: var(--accent); }
+
+    .contact-card:hover {
+      border-color: rgba(59,130,246,0.35);
+      color: #fff;
+      background: var(--accent-dim);
+      transform: translateY(-2px);
+    }
+
+    /* ── Support ─────────────────────────────────────────────── */
+    #support { background: var(--bg); }
+
+    .support-inner {
+      max-width: 440px;
+    }
+
+    .support-inner p {
+      color: var(--text-subtle);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .venmo-box {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.75rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .venmo-box img {
+      width: 160px; height: 160px;
+      border-radius: 8px;
+    }
+
+    .venmo-box .venmo-handle {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-subtle);
+    }
+
+    /* ── Footer ──────────────────────────────────────────────── */
+    footer {
+      margin-left: var(--sidebar-w);
+      padding: 1.75rem 4rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--accent); opacity: 1; }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      #sidebar { display: none; }
+      #mobile-header { display: flex; }
+      #main { margin-left: 0; padding-top: 60px; }
+      footer { margin-left: 0; }
+
+      #top, section { padding: 3rem 1.5rem; }
+      section { padding: 3.5rem 1.5rem; }
+      #top { min-height: calc(100vh - 60px); }
+
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+      .stats { gap: 1.5rem; }
+
+      footer { padding: 1.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      .section-title { font-size: 1.5rem; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .contact-links { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar (desktop) -->
+  <aside id="sidebar">
+    <div class="profile">
+      <div class="avatar-wrap">
+        <img src="assets/avatar.jpg" alt="Victor Lin" onerror="this.src='http://res.cloudinary.com/pinitt/image/upload/c_scale,w_200/v1475185582/profile_k8lrcx.jpg'" />
+      </div>
+      <h1>Victor Lin</h1>
+      <p class="role">Sr. Manager of Cloud Engineering</p>
+      <span class="company">@ Houzz</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#top" class="active">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Intro
+          </a>
+        </li>
+        <li>
+          <a href="#about">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            About Me
+          </a>
+        </li>
+        <li>
+          <a href="#portfolio">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a href="#contact">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="#support">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Support
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="social">
+      <a href="https://www.linkedin.com/in/victor-i-chung-lin/" title="LinkedIn" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://www.github.com/victorlin-houzz" title="GitHub" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+      <a href="https://medium.com/@victor-lin" title="Medium" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795h6.633v.403l-1.916 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537v-10.91l-5.389 13.688h-.728l-6.275-13.688v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404h-7.148v-.404l2.521-3.058c.27-.279.39-.67.325-1.052v-10.608z"/></svg>
+      </a>
+      <a href="mailto:swissashley@gmail.com" title="Email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <a href="https://github.com/victorlin-houzz/victorlin/raw/master/Victor_Lin_resume_2025.pdf" title="Resume" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Mobile header -->
+  <header id="mobile-header">
+    <span class="brand">Victor Lin</span>
+    <button id="menu-toggle" aria-label="Open menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </header>
+
+  <div id="mobile-nav-overlay">
+    <div id="mobile-nav-panel">
+      <ul>
+        <li><a href="#top">Intro</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="top">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          Available for new opportunities
+        </div>
+        <h2 class="hero-name">
+          Hi, I'm<br/>
+          <span class="gradient">Victor Lin</span>
+        </h2>
+        <p class="hero-subtitle">
+          Senior Manager of Cloud Engineering at Houzz. I build and evolve secure, scalable, and cost-effective Cloud and Data infrastructure at scale.
+        </p>
+        <div class="hero-cta">
+          <a href="#about" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            About Me
+          </a>
+          <a href="https://github.com/victorlin-houzz/victorlin/raw/master/Victor_Lin_resume_2025.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            View Resume
+          </a>
+        </div>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-value">10+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">2</div>
+            <div class="stat-label">Teams Led</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">9</div>
+            <div class="stat-label">Engineers Managed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">Building Cloud Infrastructure<br/>at Scale</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            My mission is to build and evolve a secure, scalable, and cost-effective Cloud and Data infrastructure that supports Houzz products and analytics at scale.
+          </p>
+          <p>
+            I focus on driving reliability, efficiency, and developer empowerment across AWS, Kubernetes, and our Data platforms. I lead 2 teams of 9 Core and Data Infrastructure Engineers, setting clear goals and providing strategic guidance to align our work with company-wide priorities.
+          </p>
+          <p>
+            Passionate about cloud-native architectures, platform engineering, and building high-performing engineering teams.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <label>Cloud &amp; Infrastructure</label>
+            <div class="tags">
+              <span class="tag accent">AWS</span>
+              <span class="tag accent">Kubernetes</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <label>Data Platform</label>
+            <div class="tags">
+              <span class="tag">Spark</span>
+              <span class="tag">Kafka</span>
+              <span class="tag">Airflow</span>
+              <span class="tag">Data Lake</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <label>Leadership</label>
+            <div class="tags">
+              <span class="tag">Engineering Management</span>
+              <span class="tag">Team Building</span>
+              <span class="tag">OKRs</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <label>Development</label>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Go</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Ruby</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title">Past Projects</h2>
+      <div class="portfolio-grid">
+
+        <div class="card">
+          <img src="images/pinitt.png" alt="Pinitt" class="card-img" />
+          <div class="card-body">
+            <h3>Pinitt</h3>
+            <p>A full-stack Pinterest-inspired app with image pinning, boards, and social features.</p>
+            <div class="card-links">
+              <a href="http://www.pinitt.us" class="card-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live
+              </a>
+              <a href="https://github.com/swissashley/fullstack-pinitt" class="card-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/coin_rush.png" alt="Coin Rush" class="card-img" />
+          <div class="card-body">
+            <h3>Coin Rush</h3>
+            <p>A JavaScript browser game built with vanilla JS, featuring real-time coin collection mechanics.</p>
+            <div class="card-links">
+              <a href="https://swissashley.github.io/js-CoinRush" class="card-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live
+              </a>
+              <a href="https://victorlin-houzz.github.io/js-CoinRush/" class="card-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/chrome1.png" alt="Now You Don't See Me" class="card-img" />
+          <div class="card-body">
+            <h3>Now You (Don't) See Me</h3>
+            <p>A Chrome extension for hiding sensitive content on screen during presentations.</p>
+            <div class="card-links">
+              <a href="https://chrome.google.com/webstore/detail/now-you-dont-see-me/chbfbamopjjdfodhafkjhpbolcpnijio" class="card-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Chrome Store
+              </a>
+              <a href="https://github.com/swissashley/chrome-ext-now-you-dont-see-me" class="card-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/chrome2.png" alt="LinkedIn Endorser" class="card-img" />
+          <div class="card-body">
+            <h3>LinkedIn Endorser</h3>
+            <p>A Chrome extension that automates LinkedIn skill endorsements to help your network.</p>
+            <div class="card-links">
+              <a href="https://chrome.google.com/webstore/detail/linkedin-endorser/mhakkhaadpkehkiiiimheegdbchfmlbi" class="card-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Chrome Store
+              </a>
+              <a href="https://github.com/swissashley/chrome-ext-linkedinEndorser" class="card-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/victor-i-chung-lin/" class="contact-card" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.github.com/victorlin-houzz" class="contact-card" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://medium.com/@victor-lin" class="contact-card" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795h6.633v.403l-1.916 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537v-10.91l-5.389 13.688h-.728l-6.275-13.688v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404h-7.148v-.404l2.521-3.058c.27-.279.39-.67.325-1.052v-10.608z"/></svg>
+          Medium
+        </a>
+        <a href="mailto:swissashley@gmail.com" class="contact-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Me
+        </a>
+        <a href="https://github.com/victorlin-houzz/victorlin/raw/master/Victor_Lin_resume_2025.pdf" class="contact-card" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          Resume (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- Support -->
+    <section id="support">
+      <p class="section-label">Support</p>
+      <h2 class="section-title">Support My Work</h2>
+      <div class="support-inner">
+        <p>If you enjoy my work or find my projects useful, consider buying me a coffee via Venmo. Every bit of support is greatly appreciated!</p>
+        <a href="https://venmo.com/u/swissashley" class="venmo-box" target="_blank" rel="noopener">
+          <img src="images/venmo-qr.png" alt="Venmo QR code for @swissashley" />
+          <span class="venmo-handle">@swissashley on Venmo</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>&copy; 2025 Victor Lin. All rights reserved.</span>
+    <span>Built with ❤️ and modern CSS</span>
+  </footer>
+
+  <script>
+    // Active nav link tracking
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#sidebar nav a');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const overlay = document.getElementById('mobile-nav-overlay');
+
+    toggle.addEventListener('click', () => {
+      overlay.classList.toggle('open');
+    });
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay || e.target.tagName === 'A') {
+        overlay.classList.remove('open');
+      }
+    });
+  </script>
+
+</body>
 </html>
-
-
-
