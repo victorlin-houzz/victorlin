@@ -466,6 +466,48 @@
       margin-top: 0.5rem;
     }
 
+    .portfolio-subsection {
+      margin-top: 1.25rem;
+    }
+
+    .portfolio-subtitle {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0.25rem 0 0.75rem;
+    }
+
+    .project-badges {
+      display: flex;
+      gap: 0.45rem;
+      margin-bottom: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .project-badge {
+      display: inline-block;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      color: var(--text-subtle);
+      background: var(--bg-secondary);
+    }
+
+    .project-badge.featured {
+      color: #93c5fd;
+      border-color: rgba(59,130,246,.35);
+      background: rgba(59,130,246,.12);
+    }
+
+    .project-badge.legacy {
+      color: #fbbf24;
+      border-color: rgba(251,191,36,.35);
+      background: rgba(251,191,36,.10);
+    }
+
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -860,99 +902,110 @@
     <!-- Portfolio -->
     <section id="portfolio">
       <p class="section-label">Portfolio</p>
-      <h2 class="section-title">Past Projects</h2>
-      <div class="portfolio-grid">
+      <h2 class="section-title">Featured & Legacy Projects</h2>
+      <p class="section-subtitle">Three latest projects are featured first. Earlier work is grouped as legacy.</p>
 
-        <div class="card">
-          <img src="images/jesussays_icon.png" alt="Jesus Says Now" class="card-img" style="object-fit: contain; padding: 1.5rem; background: #1a1025;" />
-          <div class="card-body">
-            <h3>Jesus Says Now</h3>
-            <p>An iOS app delivering daily inspirational quotes and Bible verses to guide and uplift your day.</p>
-            <div class="card-links">
-              <a href="https://apps.apple.com/us/app/jesus-says-now/id6756906208" class="card-link" target="_blank" rel="noopener">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                App Store
-              </a>
-              <a href="jesussays_privacy.html" class="card-link">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Privacy
-              </a>
+      <div class="portfolio-subsection">
+        <h3 class="portfolio-subtitle">Featured</h3>
+        <div class="portfolio-grid">
+
+          <div class="card">
+            <img src="images/jesussays_icon.png" alt="Jesus Says Now" class="card-img" style="object-fit: contain; padding: 1.5rem; background: #1a1025;" />
+            <div class="card-body">
+              <div class="project-badges"><span class="project-badge featured">Latest</span></div>
+              <h3>Jesus Says Now</h3>
+              <p>An iOS app delivering daily inspirational quotes and Bible verses to guide and uplift your day.</p>
+              <div class="card-links">
+                <a href="https://apps.apple.com/us/app/jesus-says-now/id6756906208" class="card-link" target="_blank" rel="noopener">App Store</a>
+                <a href="jesussays_privacy.html" class="card-link">Privacy</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card">
-          <img src="images/pinitt.png" alt="Pinitt" class="card-img" />
-          <div class="card-body">
-            <h3>Pinitt</h3>
-            <p>A full-stack Pinterest-inspired app with image pinning, boards, and social features.</p>
-            <div class="card-links">
-              <a href="http://www.pinitt.us" class="card-link" target="_blank" rel="noopener">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live
-              </a>
-              <a href="https://github.com/swissashley/fullstack-pinitt" class="card-link" target="_blank" rel="noopener">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                GitHub
-              </a>
+          <div class="card">
+            <img src="images/alexisautonomy_icon.svg" alt="Alexis Autonomy" class="card-img" style="object-fit: contain; padding: 1.2rem; background: #101826;" />
+            <div class="card-body">
+              <div class="project-badges"><span class="project-badge featured">Latest</span></div>
+              <h3>Alexis Autonomy</h3>
+              <p>A public build-log site for AI execution workflows, monetization experiments, and operator systems.</p>
+              <div class="card-links">
+                <a href="https://alexisautonomy.com" class="card-link" target="_blank" rel="noopener">Visit Site</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card">
-          <img src="images/coin_rush.png" alt="Coin Rush" class="card-img" />
-          <div class="card-body">
-            <h3>Coin Rush</h3>
-            <p>A JavaScript browser game built with vanilla JS, featuring real-time coin collection mechanics.</p>
-            <div class="card-links">
-              <a href="https://swissashley.github.io/js-CoinRush" class="card-link" target="_blank" rel="noopener">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live
-              </a>
-              <a href="https://victorlin-houzz.github.io/js-CoinRush/" class="card-link" target="_blank" rel="noopener">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                GitHub
-              </a>
+          <div class="card">
+            <img src="images/clawpersonahub_icon.svg" alt="Claw Persona Hub" class="card-img" style="object-fit: contain; padding: 1.2rem; background: #1b1119;" />
+            <div class="card-body">
+              <div class="project-badges"><span class="project-badge featured">Latest</span></div>
+              <h3>Claw Persona Hub</h3>
+              <p>A persona marketplace for OpenClaw with conversion-focused packs, templates, and upcoming knowledge products.</p>
+              <div class="card-links">
+                <a href="https://clawpersonahub.com" class="card-link" target="_blank" rel="noopener">Visit Site</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card">
-          <img src="images/chrome1.png" alt="Now You Don't See Me" class="card-img" />
-          <div class="card-body">
-            <h3>Now You (Don't) See Me</h3>
-            <p>A Chrome extension for hiding sensitive content on screen during presentations.</p>
-            <div class="card-links">
-              <a href="https://chrome.google.com/webstore/detail/now-you-dont-see-me/chbfbamopjjdfodhafkjhpbolcpnijio" class="card-link" target="_blank" rel="noopener">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Chrome Store
-              </a>
-              <a href="https://github.com/swissashley/chrome-ext-now-you-dont-see-me" class="card-link" target="_blank" rel="noopener">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                GitHub
-              </a>
+        </div>
+      </div>
+
+      <div class="portfolio-subsection">
+        <h3 class="portfolio-subtitle">Legacy (10+ years)</h3>
+        <div class="portfolio-grid">
+
+          <div class="card">
+            <img src="images/pinitt.png" alt="Pinitt" class="card-img" />
+            <div class="card-body">
+              <div class="project-badges"><span class="project-badge legacy">Legacy</span></div>
+              <h3>Pinitt</h3>
+              <p>A full-stack Pinterest-inspired app with image pinning, boards, and social features.</p>
+              <div class="card-links">
+                <a href="http://www.pinitt.us" class="card-link" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/swissashley/fullstack-pinitt" class="card-link" target="_blank" rel="noopener">GitHub</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card">
-          <img src="images/chrome2.png" alt="LinkedIn Endorser" class="card-img" />
-          <div class="card-body">
-            <h3>LinkedIn Endorser</h3>
-            <p>A Chrome extension that automates LinkedIn skill endorsements to help your network.</p>
-            <div class="card-links">
-              <a href="https://chrome.google.com/webstore/detail/linkedin-endorser/mhakkhaadpkehkiiiimheegdbchfmlbi" class="card-link" target="_blank" rel="noopener">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Chrome Store
-              </a>
-              <a href="https://github.com/swissashley/chrome-ext-linkedinEndorser" class="card-link" target="_blank" rel="noopener">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                GitHub
-              </a>
+          <div class="card">
+            <img src="images/coin_rush.png" alt="Coin Rush" class="card-img" />
+            <div class="card-body">
+              <div class="project-badges"><span class="project-badge legacy">Legacy</span></div>
+              <h3>Coin Rush</h3>
+              <p>A JavaScript browser game built with vanilla JS, featuring real-time coin collection mechanics.</p>
+              <div class="card-links">
+                <a href="https://swissashley.github.io/js-CoinRush" class="card-link" target="_blank" rel="noopener">Live</a>
+                <a href="https://victorlin-houzz.github.io/js-CoinRush/" class="card-link" target="_blank" rel="noopener">GitHub</a>
+              </div>
             </div>
           </div>
-        </div>
 
+          <div class="card">
+            <img src="images/chrome1.png" alt="Now You Don't See Me" class="card-img" />
+            <div class="card-body">
+              <div class="project-badges"><span class="project-badge legacy">Legacy</span></div>
+              <h3>Now You (Don't) See Me</h3>
+              <p>A Chrome extension for hiding sensitive content on screen during presentations.</p>
+              <div class="card-links">
+                <a href="https://chrome.google.com/webstore/detail/now-you-dont-see-me/chbfbamopjjdfodhafkjhpbolcpnijio" class="card-link" target="_blank" rel="noopener">Chrome Store</a>
+                <a href="https://github.com/swissashley/chrome-ext-now-you-dont-see-me" class="card-link" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/chrome2.png" alt="LinkedIn Endorser" class="card-img" />
+            <div class="card-body">
+              <div class="project-badges"><span class="project-badge legacy">Legacy</span></div>
+              <h3>LinkedIn Endorser</h3>
+              <p>A Chrome extension that automates LinkedIn skill endorsements to help your network.</p>
+              <div class="card-links">
+                <a href="https://chrome.google.com/webstore/detail/linkedin-endorser/mhakkhaadpkehkiiiimheegdbchfmlbi" class="card-link" target="_blank" rel="noopener">Chrome Store</a>
+                <a href="https://github.com/swissashley/chrome-ext-linkedinEndorser" class="card-link" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
